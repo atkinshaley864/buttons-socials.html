@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Icons</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
-
-  <!-- Awesome fonts -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-  <!-- Roboto font -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
@@ -21,18 +15,12 @@
       box-sizing: border-box;
     }
 
-    *:focus,
-    *:active {
-      outline: none !important;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    html,
-    body {
+    html, body {
       display: grid;
-      height: 100%;
-      font-family: "Poppins", sans-serif;
+      height: 100vh;
       place-items: center;
+      font-family: "Poppins", sans-serif;
+      background-color: #f0f0f0;
     }
 
     .wrapper {
@@ -52,23 +40,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all 0.2s ease-in-out;
     }
 
     .wrapper .tooltip {
       position: absolute;
-      top: 0;
+      top: -45px;
       font-size: 14px;
-      background: #ffffff;
-      color: #ffffff;
+      background: #000;
+      color: #fff;
       padding: 5px 8px;
       border-radius: 5px;
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
       opacity: 0;
       pointer-events: none;
-      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all 0.3s ease-in-out;
     }
 
     .wrapper .tooltip::before {
@@ -76,47 +63,31 @@
       content: "";
       height: 8px;
       width: 8px;
-      background: #ffffff;
-      bottom: -3px;
+      background: #000;
+      bottom: -4px;
       left: 50%;
-      transform: translate(-50%) rotate(45deg);
-      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transform: translateX(-50%) rotate(45deg);
     }
 
     .wrapper .icon:hover .tooltip {
-      top: -45px;
       opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
     }
 
-    .wrapper .icon:hover span,
-    .wrapper .icon:hover .tooltip {
-      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    .wrapper .pinterest:hover {
+      background-color: #E4405F;
+      color: #fff;
     }
 
-    .wrapper .pinterest:hover,
-    .wrapper .pinterest:hover .tooltip,
-    .wrapper .pinterest:hover .tooltip::before {
-      background: #E4405F;
-      color: #ffffff;
+    .wrapper .facebook:hover {
+      background-color: #3b5998;
+      color: #fff;
     }
 
-    .wrapper .facebook:hover,
-    .wrapper .facebook:hover .tooltip,
-    .wrapper .facebook:hover .tooltip::before {
-      background: #3b5998;
-      color: #ffffff;
-    }
-
-    .wrapper .instagram:hover,
-    .wrapper .instagram:hover .tooltip,
-    .wrapper .instagram:hover .tooltip::before {
-      background: #C13584;
-      color: #ffffff;
+    .wrapper .instagram:hover {
+      background-color: #C13584;
+      color: #fff;
     }
   </style>
-
 </head>
 <body>
 
@@ -138,11 +109,11 @@
   <script>
     function navigate(id) {
       if (id === "pinterest") {
-        window.open("https://www.pinterest.com/atkinstravelagency", '_blank').focus();
+        window.open("https://www.pinterest.com/atkinstravelagency", '_blank');
       } else if (id === "facebook") {
-        window.open("https://www.facebook.com/atkinstravelagencyllc", '_blank').focus();
+        window.open("https://www.facebook.com/atkinstravelagencyllc", '_blank');
       } else if (id === "instagram") {
-        window.open("https://www.instagram.com/atkinstravelagency", '_blank').focus();
+        window.open("https://www.instagram.com/atkinstravelagency", '_blank');
       }
     }
   </script>
